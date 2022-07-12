@@ -3,17 +3,17 @@ package main
 import (
 	"fmt"
 	"strings"
-	// "strings"
 )
 
 func main() {
 	fmt.Printf("\x1bc")
-	fmt.Println("PROGRAM SEDERHANA SEARCHING SEQUENSIAL MIFTA N R 10", "\n")
+	fmt.Println(`PROGRAM SEDERHANA SEARCHING SEQUENSIAL MIFTA N R 10
+	`)
 	text := `
 List Data :                                           
 1.  Januari                                          
 2.  Februari
-3.  Maret
+3.  M	aret
 4.  April
 5.  Mei
 6.  Juni
@@ -35,19 +35,15 @@ List Data :
 	fmt.Printf("Masukka Data yang Ingin Dicari: ")
 	fmt.Scanln(&search)
 
-	// search := strings.ToLower(search)
-	// while(true){
-
 	// }
 	for i := 0; i < len(month); i++ {
-		// search := strings.ToLower(search)
 		if strings.EqualFold(month[i], search) {
 			fmt.Println("Data Ditemukan Pada Index Ke: ", i)
-			return
+			break
 		}
 		if i == (len(month) - 1) {
 			fmt.Println("Tidak Ada Data Ditemukan")
-			break
+			// break
 		}
 	}
 	// for i := 0; i < 12; i++ {
