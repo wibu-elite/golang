@@ -26,7 +26,7 @@ func main() {
 			fmt.Println("Data Ditemukan Pada Index ke :", i)
 			break
 		}
-
+		
 	}
 
 }

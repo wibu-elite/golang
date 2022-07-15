@@ -13,7 +13,7 @@ func main() {
 List Data :                                           
 1.  Januari                                          
 2.  Februari
-3.  M	aret
+3.  Maret
 4.  April
 5.  Mei
 6.  Juni

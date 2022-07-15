@@ -8,18 +8,19 @@ var (
 	banyakData int
 	urutkan    int
 	cariData   int
-	Hasil int
+	Hasil      int
 )
 
+
 // Fungsi Mengurutkan Bilangan
-func UrutkanData(banyakData int, urutkan int) {
+func BinarySearch(banyakData int, urutkan int, cariData int) {
 	fmt.Printf("Masukkan Bnayak Data: ")
 	fmt.Scanln(&banyakData)
 
 	var urut int
 	var value = make([]int, 254)
 	for i := 0; i < banyakData; i++ {
-		fmt.Printf("Masukkan Data: ")
+		fmt.Print("Masukkan Data Ke", i+1,": ")
 		fmt.Scanln(&value[i])
 	}
 
@@ -37,23 +38,29 @@ Hasil Data Setelah Diurutkan: `)
 	for i := 0; i < banyakData; i++ {
 		fmt.Print(value[i+1], " ")
 	}
+	fmt.Printf(`
+Masukkan Data yang Ingin Dicari: `)
+	fmt.Scanln(&cariData)
+	fmt.Println(cariData)
 
+	for i := 0; i < len(value); i++{
+		low := 0
+		high := len(value)
+		mid := (low + high) / 2
+		if cariData < value[mid] {
+			high = mid - 1
+		} else if cariData > value[mid] {
+			high = mid + 1
+		} else if cariData == value[mid] {
+			
+		}
+	}
 }
-
-//Fungsi
-
-func BinarySeacrh(banyakData int, cariData int) {
-	fmt.Println(banyakData)
-}
-
 func main() {
 	var banyakData int
 	fmt.Printf("\x1bc")
 	fmt.Println(`Program Binary Searching Dengan Inputan Dari User
 	`)
-	// for 
-	UrutkanData(banyakData, urutkan)
 
-
+	BinarySearch(banyakData, urutkan, cariData)
 }
-
