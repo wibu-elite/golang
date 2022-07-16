@@ -39,31 +39,35 @@ Hasil Data Setelah Diurutkan: `)
 	for i := 0; i < banyakData; i++ {
 		fmt.Print(value[i+1], " ")
 	}
+
 	fmt.Printf(`
 Masukkan Data yang Ingin Dicari: `)
 	fmt.Scanln(&cariData)
-
 	low := 0
 	high := banyakData
 	// fmt.Println(high)
-	for low <= high{
-		mid = (high +low)/2
+	for low <= high {
+		mid = (high + low) / 2
 		if cariData < value[mid] {
 			high = mid - 1
-		} 
+		}
 		if cariData > value[mid] {
 			low = mid + 1
 		}
-		if value[mid] == cariData{
+		if value[mid] == cariData {
 			fmt.Print("Data Ditemukan Pada Index Ke: ", mid-1)
 			return
 		}
 	}
-
+	if value[mid] != cariData {
+		fmt.Println("Data Tidak Ditemukan")
+		return
+	}
 
 	// for i := 0; i < banyakData; i++{
 	// 	if value[mid] == cariData{
-	// 		fmt.Print("Data", cariData, "Ditemukan Pada ", mid) 
+	// 		fmt.Print("Data", cariData, "Ditemukan Pada ", mid)
 	// 	}
 	// }
 }
+ 
