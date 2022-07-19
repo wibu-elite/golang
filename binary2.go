@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-var ()
+// var ()
 
 // Fungsi Mengurutkan Bilangan
 func main() {
