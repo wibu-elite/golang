@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -17,21 +18,26 @@ func RandomNumber(){
 
 func main() {
 	fmt.Print("\x1bc")
-	fmt.Println(`Function With Paramater
+	fmt.Println(`Random Data
 	`)
-	var number int
+	var(
+		number string
+		// code string
+	) 
 	for true{
-		fmt.Printf("Masukkan Angka: ")
+		fmt.Printf("Masukkan Kode: ")
 		fmt.Scanln(&number)
+		number = strings.ToLower(number)
 
-		if number == 1{
+		if number == "1"{
 		RandomNumber()
-		}else if number == 2{
+		}else if number == "2"{
 		fmt.Println("Anda Telah Keluar Program")
 		os.Exit(2)
+		}else if number == "clear"{
+			fmt.Print("\x1bc")
 		}else {
 		fmt.Println("Pilihanmu Tidak Ada")
 		}
 	}
-	
 }
