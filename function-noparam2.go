@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
@@ -18,5 +19,19 @@ func main() {
 	fmt.Print("\x1bc")
 	fmt.Println(`Function With Paramater
 	`)
-	RandomNumber()
+	var number int
+	for true{
+		fmt.Printf("Masukkan Angka: ")
+		fmt.Scanln(&number)
+
+		if number == 1{
+		RandomNumber()
+		}else if number == 2{
+		fmt.Println("Anda Telah Keluar Program")
+		os.Exit(2)
+		}else {
+		fmt.Println("Pilihanmu Tidak Ada")
+		}
+	}
+	
 }
